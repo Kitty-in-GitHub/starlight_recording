@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4d51a9dd96b01d49",
+        "id": "c6f9638172c88950",
         "type": "tabs",
         "children": [
           {
-            "id": "1e161f74a0bac3a6",
+            "id": "6237dbc580dd7493",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "trainning/HumanResources/OurDuty.md",
+                "file": "trainning/BorrowClassroom.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "OurDuty"
+              "title": "BorrowClassroom"
             }
           }
         ]
@@ -160,7 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -169,53 +169,52 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1e161f74a0bac3a6",
+  "active": "6237dbc580dd7493",
   "lastOpenFiles": [
-    "trainning/HumanResources/Organization/Publicity.md",
-    "trainning/HumanResources/Organization/DigitalMarketing.md",
-    "trainning/HumanResources/Organization/Administrative.md",
-    "trainning/HumanResources/OurDuty.md",
-    "FakeHistory/Two proposals.md",
-    "FakeHistory/Rules 1.md",
-    "FakeHistory/pokemon.md",
     "trainning/HowToWriteTD.md",
-    "trainning/BeYourself.md",
-    "trainning/WriteWeChatTweet.md",
+    "trainning/BorrowClassroom.md",
+    "trainning/img/Pasted image 20260123162921.png",
+    "trainning/img/Pasted image 20260123162252.png",
+    "trainning/img/Pasted image 20250317135811.png",
+    "trainning/img/Pasted image 20250317134958.png",
+    "trainning/img/Pasted image 20250317134027.png",
+    "trainning/img/Pasted image 20250317133008.png",
+    "trainning/img/Pasted image 20250317132814.png",
+    "trainning/img/Pasted image 20250317132741.png",
+    "trainning/img/Pasted image 20250317122544.png",
+    "trainning/img/Pasted image 20250317122418.png",
     "trainning/PlanningProposal_Template.md",
     "trainning/PublicityHelper.md",
     "trainning/WebsiteTools.md",
+    "trainning/WriteWeChatTweet.md",
+    "trainning/BeYourself.md",
+    "index.md",
+    "xiumi.us.md",
+    "trainning/HumanResources/OurDuty.md",
+    "trainning/HumanResources/Organization/Publicity.md",
+    "trainning/HumanResources/Organization/Administrative.md",
+    "wonder/SpaceGreatWall.md",
+    "wonder/City of The Broken.md",
+    "wonder/City of Fresh.md",
+    "memory.md",
+    "trainning/HumanResources/Organization/DigitalMarketing.md",
+    "FakeHistory/Two proposals.md",
+    "FakeHistory/Rules 1.md",
+    "FakeHistory/pokemon.md",
     "trainning/HumanResources/未命名.md",
     "trainning/HumanResources/Organization",
-    "trainning/BorrowClassroom.md",
     "character/Dan_Ji.md",
     "natural/creature/furry.md",
     "natural/creature/Famcust.md",
     "natural/creature/human.md",
-    "memory.md",
-    "test.md",
-    "index.md",
-    "胎死腹中？.md",
-    "trainning/oldsayings.md",
     "trainning/HumanResources",
     "natural/creature",
-    "technology/SolarTec/DarkDust.md",
     "natural/disease",
-    "technology/SolarTec/SKgas.md",
     "natural",
     "technology/SolarTec",
-    "trainning/img/Pasted image 20250317122234.png",
-    "img/logo.png",
-    "img/星弦徽标带文字 黑字透明底.png",
     "N12",
     "story/SeedingsInMine",
     "trainning",
-    "img/Pasted image 20250317135811.png",
-    "img/Pasted image 20250317134958.png",
-    "img/Pasted image 20250317134027.png",
-    "img/Pasted image 20250317133008.png",
-    "img/Pasted image 20250317132814.png",
-    "img/Pasted image 20250317132741.png",
-    "img/Pasted image 20250317122544.png",
     "img"
   ]
 }
