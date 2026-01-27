@@ -11,6 +11,7 @@ markdown_extensions:
 #站点设置
 theme:
   features:
+    - content.code.copy #启用代码块复制按钮
     - navigation.tabs #启用导航选项卡
     - navigation.instant
     - navigation.instant.progress #启用缓冲条
@@ -93,4 +94,6 @@ nav:
     - 借教室: trainning/BorrowClassroom.md
     - 站务工具: trainning/WebsiteTools.md
     - 帮推和LED大屏投稿指南: trainning/PublicityHelper.md
-    #- 策划案、活动预算表和安全方案模板: trainning/PlanningProposal_Template.md
+    - 举办活动涉及的行政流程: trainning/TheFullProgressOfHoldingClubActivities.md
+    - 模板文件:
+      - 活动计划书: trainning/Template/PlanningProposal_Template.md
