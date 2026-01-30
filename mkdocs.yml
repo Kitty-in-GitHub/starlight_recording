@@ -85,9 +85,9 @@ nav:
   - 骨干手册:
     - 人力资源:
       - 人事安排: trainning/HumanResources/OurDuty.md
-      - 工作分工:
-        - 天玑: trainning/HumanResources/Organization/Administrative.md
-        - 开阳: trainning/HumanResources/Organization/Publicity.md
+      # - 工作分工:
+      #   - 天玑: trainning/HumanResources/Organization/Administrative.md
+      #   - 开阳: trainning/HumanResources/Organization/Publicity.md
     - 指南撰写指南: trainning/HowToWriteTD.md
     - 推文撰写和排版指南: trainning/WriteWeChatTweet.md
     - 角色扮演指南: trainning/BeYourself.md
