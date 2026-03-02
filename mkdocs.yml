@@ -54,7 +54,7 @@ nav:
     - 罅隙星域: power introduce/CrackSpace.md
   - 人物: 
     - 罗拉瓦: character/Lorava.md
-    - 丹佶: character/Dan Ji.md
+    - 丹佶: character/Dan_Ji.md
     - 海月: character/SeaMoon.md
     - 钋先生: character/Mr Po.md
     - 汤光: character/Tang Guang.md
@@ -91,9 +91,12 @@ nav:
     - 指南撰写指南: trainning/HowToWriteTD.md
     - 推文撰写和排版指南: trainning/WriteWeChatTweet.md
     - 角色扮演指南: trainning/BeYourself.md
-    - 借教室: trainning/BorrowClassroom.md
-    - 站务工具: trainning/WebsiteTools.md
-    - 帮推和LED大屏投稿指南: trainning/PublicityHelper.md
-    - 举办活动涉及的行政流程: trainning/TheFullProgressOfHoldingClubActivities.md
+    - 行政工作:
+      - 举办活动: trainning/TheDepartmentOfLove/TheFullProgressOfHoldingClubActivities.md
+      - 借教室: trainning/TheDepartmentOfLove/BorrowClassroom.md
+      - 帮推和LED大屏投稿指南: trainning/TheDepartmentOfLove/PublicityHelper.md
     - 模板文件:
       - 活动计划书: trainning/Template/PlanningProposal_Template.md
+    - 站务工具:
+      - markdown语法: trainning/markdownLanguage/basic.md
+      - 网站框架: trainning/markdownLanguage/WebsiteTools.md
