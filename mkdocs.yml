@@ -43,6 +43,7 @@ nav:
   - 主页: index.md
   - 故事: 
     - 深潜者: story/DeepSeek.md
+    #- 斯特拉: story/Stella.md
     - 米兰卡斯托大学: story/MilanCastoUniversity.md
     - 发芽的钻井(不定期更新中):
       - 楔子:  story/SeedingsInMine/No1.md
@@ -101,3 +102,4 @@ nav:
     - 站务工具:
       - markdown语法: trainning/markdownLanguage/basic.md
       - 网站框架: trainning/markdownLanguage/WebsiteTools.md
+    - 骨干手册编写练习: trainning/practice.md
