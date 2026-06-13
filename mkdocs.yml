@@ -102,4 +102,5 @@ nav:
     - 站务工具:
       - markdown语法: trainning/markdownLanguage/basic.md
       - 网站框架: trainning/markdownLanguage/WebsiteTools.md
+      - GitHub使用指南: trainning/markdownLanguage/GitAndGitHub.md
     - 骨干手册编写练习: trainning/practice.md
