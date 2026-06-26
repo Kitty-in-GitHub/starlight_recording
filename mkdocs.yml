@@ -2,6 +2,7 @@
 site_name: 星弦·北门观测站 #站点名
 site_url: https://kitty-in-github.github.io/starlight_recording/ #默认站点地址
 
+
 #markdown扩展语法
 markdown_extensions:
   - def_list
