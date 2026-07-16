@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
+  <title id="title">北门观测站仓库文件地图</title>
+  <desc id="desc">说明 docs、mkdocs.yml、GitHub Actions 和 site 之间的关系。</desc>
+  <rect width="1440" height="520" rx="28" fill="#121212"/>
+  <text x="72" y="82" fill="#fff" font-family="Arial, sans-serif" font-size="36" font-weight="700">仓库里该改什么、不该改什么？</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(72 140)"><rect width="570" height="140" rx="18" fill="#16345b" stroke="#60a5fa" stroke-width="2"/><text x="34" y="54" fill="#bfdbfe" font-size="27" font-weight="700">docs/</text><text x="34" y="91" fill="#fff" font-size="20">文章、图片的源文件</text><text x="34" y="119" fill="#cbd5e1" font-size="17">日常维护主要在这里完成</text></g>
+    <g transform="translate(798 140)"><rect width="570" height="140" rx="18" fill="#12373b" stroke="#5eead4" stroke-width="2"/><text x="34" y="54" fill="#a7f3d0" font-size="27" font-weight="700">mkdocs.yml</text><text x="34" y="91" fill="#fff" font-size="20">导航与站点配置</text><text x="34" y="119" fill="#cbd5e1" font-size="17">新增页面时，按原有缩进增加导航</text></g>
+    <g transform="translate(72 350)"><rect width="570" height="110" rx="18" fill="#3e2029" stroke="#fb7185" stroke-width="2"/><text x="34" y="50" fill="#fecdd3" font-size="27" font-weight="700">.github/workflows/ci.yml</text><text x="34" y="84" fill="#fff" font-size="20">自动构建与发布设置：新成员不要修改</text></g>
+    <g transform="translate(798 350)"><rect width="570" height="110" rx="18" fill="#4a2d11" stroke="#fbbf24" stroke-width="2"/><text x="34" y="50" fill="#fde68a" font-size="27" font-weight="700">site/</text><text x="34" y="84" fill="#fff" font-size="20">自动生成的网页结果：不手动编辑</text></g>
+  </g>
+  <g fill="none" stroke="#e5e7eb" stroke-width="4"><path d="M357 290v42"/><path d="M1083 290v42"/></g>
+  <g fill="#e5e7eb"><path d="M357 332l-9-12h18z"/><path d="M1083 332l-9-12h18z"/></g>
+</svg>

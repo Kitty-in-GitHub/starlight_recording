@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+  <title id="title">北门观测站直接发布流程</title>
+  <desc id="desc">从申请权限、同步 master、用 VS Code 写文章、本地预览、推送 master 到检查 Actions 的流程。</desc>
+  <rect width="1440" height="420" fill="#121212" rx="28"/>
+  <text x="72" y="88" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="700">一次文章发布，从权限到上线</text>
+  <text x="72" y="128" fill="#b5b5b5" font-family="Arial, sans-serif" font-size="20">协会人数较少，确认没有其他人修改后，直接更新 master。</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(52 192)"><rect width="195" height="132" rx="18" fill="#2d2244" stroke="#a78bfa" stroke-width="2"/><text x="97" y="54" fill="#d8c7ff" font-size="24" font-weight="700">1. 申请权限</text><text x="97" y="89" fill="#fff" font-size="18">接受 GitHub 邀请</text></g>
+    <g transform="translate(289 192)"><rect width="195" height="132" rx="18" fill="#12373b" stroke="#5eead4" stroke-width="2"/><text x="97" y="54" fill="#a7f3d0" font-size="24" font-weight="700">2. 同步 master</text><text x="97" y="89" fill="#fff" font-size="18">git pull</text></g>
+    <g transform="translate(526 192)"><rect width="195" height="132" rx="18" fill="#16345b" stroke="#60a5fa" stroke-width="2"/><text x="97" y="54" fill="#bfdbfe" font-size="24" font-weight="700">3. 写文章</text><text x="97" y="89" fill="#fff" font-size="18">VS Code 编辑</text></g>
+    <g transform="translate(763 192)"><rect width="195" height="132" rx="18" fill="#4a2d11" stroke="#fbbf24" stroke-width="2"/><text x="97" y="54" fill="#fde68a" font-size="24" font-weight="700">4. 本地预览</text><text x="97" y="89" fill="#fff" font-size="18">mkdocs serve</text></g>
+    <g transform="translate(1000 192)"><rect width="195" height="132" rx="18" fill="#3e2029" stroke="#fb7185" stroke-width="2"/><text x="97" y="54" fill="#fecdd3" font-size="24" font-weight="700">5. 推送 master</text><text x="97" y="89" fill="#fff" font-size="18">commit + push</text></g>
+    <g transform="translate(1237 192)"><rect width="155" height="132" rx="18" fill="#24352a" stroke="#86efac" stroke-width="2"/><text x="77" y="54" fill="#bbf7d0" font-size="24" font-weight="700">6. 检查</text><text x="77" y="89" fill="#fff" font-size="18">Actions + 官网</text></g>
+  </g>
+  <g stroke="#e5e7eb" stroke-width="4" fill="none"><path d="M247 258h42"/><path d="M484 258h42"/><path d="M721 258h42"/><path d="M958 258h42"/><path d="M1195 258h42"/></g>
+  <g fill="#e5e7eb"><path d="M289 258l-12-9v18z"/><path d="M526 258l-12-9v18z"/><path d="M763 258l-12-9v18z"/><path d="M1000 258l-12-9v18z"/><path d="M1237 258l-12-9v18z"/></g>
+</svg>
