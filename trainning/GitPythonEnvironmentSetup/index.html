@@ -1,0 +1,2254 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kitty-in-github.github.io/starlight_recording/trainning/GitPythonEnvironmentSetup/">
+      
+      
+        <link rel="prev" href="../Template/ranli_Template/">
+      
+      
+        <link rel="next" href="../GitHubWebsiteMaintenance/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Git、Python、VS Code 与本地环境安装 - 星弦·北门观测站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gitpythonvs-code-与本地环境安装指南" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="星弦·北门观测站" class="md-header__button md-logo" aria-label="星弦·北门观测站" data-md-component="logo">
+      
+  <img src="../../img/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            星弦·北门观测站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git、Python、VS Code 与本地环境安装
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="潜入黑暗"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="潜入黑暗" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="迎接光明"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="迎接光明" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../story/DeepSeek/" class="md-tabs__link">
+          
+  
+  
+  故事
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../power%20introduce/solar/" class="md-tabs__link">
+          
+  
+  
+  势力介绍
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../character/Lorava/" class="md-tabs__link">
+          
+  
+  
+  人物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../planet/solar/TianDingFirstNo2/" class="md-tabs__link">
+          
+  
+  
+  星球
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technology/heritage/GoldDoubleGragonCrown/" class="md-tabs__link">
+          
+  
+  
+  科技
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../wonder/City%20of%20The%20Broken/" class="md-tabs__link">
+          
+  
+  
+  奇观
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../natural/disease/BloodStoneSyndrome/" class="md-tabs__link">
+          
+  
+  
+  自然
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../FakeHistory/Two%20proposals/" class="md-tabs__link">
+          
+  
+  
+  稗官野史
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../HumanResources/OurDuty/" class="md-tabs__link">
+          
+  
+  
+  骨干手册
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="星弦·北门观测站" class="md-nav__button md-logo" aria-label="星弦·北门观测站" data-md-component="logo">
+      
+  <img src="../../img/favicon.png" alt="logo">
+
+    </a>
+    星弦·北门观测站
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../story/DeepSeek/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    故事
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../power%20introduce/solar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    势力介绍
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../character/Lorava/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人物
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../planet/solar/TianDingFirstNo2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    星球
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../technology/heritage/GoldDoubleGragonCrown/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    科技
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../wonder/City%20of%20The%20Broken/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    奇观
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../natural/disease/BloodStoneSyndrome/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自然
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../FakeHistory/Two%20proposals/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    稗官野史
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    骨干手册
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    骨干手册
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../HumanResources/OurDuty/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人力资源
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HowToWriteTD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    指南撰写指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WriteWeChatTweet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推文撰写和排版指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BeYourself/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    角色扮演指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../TheDepartmentOfLove/TheFullProgressOfHoldingClubActivities/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行政工作
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../Template/PlanningProposal_Template/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模板文件
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    站务工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    站务工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git、Python、VS Code 与本地环境安装
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git、Python、VS Code 与本地环境安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#先做一个选择" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        先做一个选择
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-安装-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装 Visual Studio Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 安装 Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-安装-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 安装 Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 安装 Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windowsgit-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows：Git for Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos使用-homebrew推荐" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS：使用 Homebrew（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#不想使用-homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不想使用 Homebrew？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-安装-python-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 安装 Python 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 安装 Python 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windowspython-官方安装包" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows：Python 官方安装包
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos使用-homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS：使用 Homebrew
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos使用-python-官方安装包" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS：使用 Python 官方安装包
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-miniconda-是什么什么时候安装" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Miniconda 是什么？什么时候安装？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-git-的首次身份设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Git 的首次身份设置
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-安装完成验收" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 安装完成验收
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 安装完成验收">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装问题速查" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装问题速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GitHubWebsiteMaintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 与网站维护
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdownLanguage/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    markdown语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdownLanguage/WebsiteTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网站框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdownLanguage/GitAndGitHub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    骨干手册编写练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#先做一个选择" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        先做一个选择
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-安装-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装 Visual Studio Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 安装 Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-安装-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 安装 Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 安装 Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windowsgit-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows：Git for Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos使用-homebrew推荐" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS：使用 Homebrew（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#不想使用-homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不想使用 Homebrew？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-安装-python-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 安装 Python 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 安装 Python 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windowspython-官方安装包" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows：Python 官方安装包
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos使用-homebrew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS：使用 Homebrew
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos使用-python-官方安装包" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS：使用 Python 官方安装包
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-miniconda-是什么什么时候安装" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Miniconda 是什么？什么时候安装？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-git-的首次身份设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Git 的首次身份设置
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-安装完成验收" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 安装完成验收
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 安装完成验收">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#安装问题速查" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装问题速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gitpythonvs-code-与本地环境安装指南">Git、Python、VS Code 与本地环境安装指南<a class="headerlink" href="#gitpythonvs-code-与本地环境安装指南" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>这是《<a href="../GitHubWebsiteMaintenance/">使用 VS Code 维护北门观测站</a>》的前置文章。</p>
+<p>如果你已经安装 VS Code，并能在它的终端中看到 Git 和 Python 的版本号，可以跳过本文。</p>
+</blockquote>
+<h2 id="先做一个选择">先做一个选择<a class="headerlink" href="#先做一个选择" title="Permanent link">&para;</a></h2>
+<p>你需要安装 VS Code、Git 和 Python；只有 Miniconda 是可选的：</p>
+<ul>
+<li><strong>Windows：</strong> 安装 Git for Windows 和 Python 官方安装包；不要安装 Homebrew。</li>
+<li><strong>macOS：</strong> 推荐使用 Homebrew 安装 Git 和 Python；也可以改用 Python 官方安装包。</li>
+<li><strong>Miniconda：</strong> 是 Python 的另一种管理方式，只有在你已经使用 Conda，或站务负责人明确要求时才安装。</li>
+</ul>
+<p>对于第一次维护网站的新成员，推荐按“操作系统 + 官方安装方式”完成即可。Homebrew 和 Miniconda 不是 GitHub 必需品，也不是 VS Code 的插件。</p>
+<hr />
+<h2 id="1-安装-visual-studio-code">1. 安装 Visual Studio Code<a class="headerlink" href="#1-安装-visual-studio-code" title="Permanent link">&para;</a></h2>
+<p>VS Code 是我们打开网站文件、编辑 Markdown 和运行终端命令的地方。请只从官方页面下载：<a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>。</p>
+<p><img alt="VS Code 官方下载页面（箭头标出 Windows 和 Mac 下载按钮）" src="../img/github-guide/vscode-download-annotated.png" /></p>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在下载页点击 <strong>Windows</strong>。</li>
+<li>下载完成后双击安装程序。</li>
+<li>安装选项保持默认即可；如果看到 <strong>Add to PATH</strong> 或“添加到 PATH”，请勾选它。</li>
+<li>点击 <strong>Install</strong>，完成后点击 <strong>Finish</strong>。</li>
+</ol>
+<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在下载页点击 <strong>Mac</strong>。</li>
+<li>如果是 M 系列芯片（M1/M2/M3/M4），选择 <strong>Apple silicon</strong>；如果是 Intel 芯片，选择 <strong>Intel chip</strong>。</li>
+<li>打开下载的 <code>.dmg</code> 文件，把 <strong>Visual Studio Code</strong> 拖到 <strong>Applications（应用程序）</strong> 文件夹。</li>
+<li>从“应用程序”打开 VS Code；第一次弹出安全提示时点击 <strong>打开</strong>。</li>
+</ol>
+<p>安装完成后，打开 VS Code，看到欢迎页就说明安装成功。暂时不需要安装任何扩展；教程后面会直接使用左侧 <strong>Explorer</strong> 和下方的 <strong>Terminal</strong>。</p>
+<h2 id="2-安装-git">2. 安装 Git<a class="headerlink" href="#2-安装-git" title="Permanent link">&para;</a></h2>
+<p>Git 负责记录文件修改、创建分支，并把本地修改同步到 GitHub。</p>
+<h3 id="windowsgit-for-windows">Windows：Git for Windows<a class="headerlink" href="#windowsgit-for-windows" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在浏览器打开 <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>。</li>
+<li>下载并运行安装程序。</li>
+<li>安装选项第一次可以全部保持默认，连续点击 <strong>Next</strong>，最后点击 <strong>Install</strong>。</li>
+<li>安装完成后重启 VS Code。</li>
+</ol>
+<p>在 VS Code 中选择 <strong>终端 → 新建终端</strong>，输入：</p>
+<pre><code class="language-shell">git --version
+</code></pre>
+<p>看到类似 <code>git version 2.x.x</code> 的文字，就安装成功了。</p>
+<blockquote>
+<p><strong>截图 A1｜Git for Windows 下载页。</strong> 红框标出下载入口；不要把下载网站上的广告按钮当成 Git 安装按钮。</p>
+<p><strong>截图 A2｜Windows Git 版本检查。</strong> VS Code 终端中显示 <code>git --version</code> 和版本号。</p>
+</blockquote>
+<h3 id="macos使用-homebrew推荐">macOS：使用 Homebrew（推荐）<a class="headerlink" href="#macos使用-homebrew推荐" title="Permanent link">&para;</a></h3>
+<p>Homebrew 是 macOS 的命令行软件包管理工具。它不是 Git，但可以帮你安装和更新 Git、Python 等工具。</p>
+<ol>
+<li>在浏览器打开 <a href="https://brew.sh/zh-cn/">https://brew.sh/zh-cn/</a>。</li>
+<li>复制网页上的安装命令。</li>
+<li>打开 VS Code 的终端，粘贴命令并按回车。</li>
+<li>安装过程中可能要求输入 macOS 登录密码。输入时终端不会显示字符，这是正常的；输入完成后按回车。</li>
+<li>安装完成后关闭并重新打开 VS Code。</li>
+</ol>
+<p>检查 Homebrew：</p>
+<pre><code class="language-shell">brew --version
+</code></pre>
+<p>再安装 Git：</p>
+<pre><code class="language-shell">brew install git
+</code></pre>
+<p>最后检查：</p>
+<pre><code class="language-shell">git --version
+</code></pre>
+<blockquote>
+<p><strong>截图 A3｜macOS Homebrew 官网。</strong> 红框标出安装命令；截图中不要包含个人用户名或终端历史中的私人信息。</p>
+<p><strong>截图 A4｜macOS 安装 Git。</strong> 终端显示 <code>brew install git</code> 完成后，再显示 <code>git --version</code> 的版本号。</p>
+</blockquote>
+<h3 id="不想使用-homebrew">不想使用 Homebrew？<a class="headerlink" href="#不想使用-homebrew" title="Permanent link">&para;</a></h3>
+<p>也可以打开 <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a> 安装官方 Git 包。安装完成后，在 VS Code 终端运行 <code>git --version</code> 验证即可；两种方式不要重复安装。</p>
+<hr />
+<h2 id="3-安装-python-3">3. 安装 Python 3<a class="headerlink" href="#3-安装-python-3" title="Permanent link">&para;</a></h2>
+<p>MkDocs 是用 Python 运行的。我们需要的是 <strong>Python 3</strong>，不是 Python 2。</p>
+<h3 id="windowspython-官方安装包">Windows：Python 官方安装包<a class="headerlink" href="#windowspython-官方安装包" title="Permanent link">&para;</a></h3>
+<ol>
+<li>打开 <a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a>。</li>
+<li>下载最新的 Python 3 安装程序。</li>
+<li>安装开始页面中，务必勾选 <strong>Add python.exe to PATH</strong>。</li>
+<li>点击 <strong>Install Now</strong>。</li>
+<li>安装完成后重启 VS Code。</li>
+</ol>
+<p>在终端运行：</p>
+<pre><code class="language-shell">py --version
+</code></pre>
+<p>看到类似 <code>Python 3.12.x</code> 即可。Windows 教程中优先使用 <code>py</code> 命令，避免系统中同时存在多个 Python 时找错版本。</p>
+<blockquote>
+<p><strong>截图 A5｜Windows Python 安装页。</strong> 红框标出 <strong>Add python.exe to PATH</strong>；这是新人最容易漏掉的选项。</p>
+<p><strong>截图 A6｜Windows Python 版本检查。</strong> 终端中显示 <code>py --version</code> 和 <code>Python 3.x.x</code>。</p>
+</blockquote>
+<h3 id="macos使用-homebrew">macOS：使用 Homebrew<a class="headerlink" href="#macos使用-homebrew" title="Permanent link">&para;</a></h3>
+<p>如果上一节已经安装 Homebrew，可以运行：</p>
+<pre><code class="language-shell">brew install python
+</code></pre>
+<p>然后检查：</p>
+<pre><code class="language-shell">python3 --version
+python3 -m pip --version
+</code></pre>
+<p>两条命令都显示版本号即可。</p>
+<h3 id="macos使用-python-官方安装包">macOS：使用 Python 官方安装包<a class="headerlink" href="#macos使用-python-官方安装包" title="Permanent link">&para;</a></h3>
+<p>不使用 Homebrew 时，打开 <a href="https://www.python.org/downloads/macos/">https://www.python.org/downloads/macos/</a>，下载 Python 3 安装包并按默认选项安装。重启 VS Code 后检查：</p>
+<pre><code class="language-shell">python3 --version
+</code></pre>
+<p>看到 <code>Python 3.x.x</code> 即可。</p>
+<blockquote>
+<p><strong>截图 A7｜macOS Python 检查。</strong> 终端中依次显示 <code>python3 --version</code> 和 <code>python3 -m pip --version</code>。</p>
+</blockquote>
+<hr />
+<h2 id="4-miniconda-是什么什么时候安装">4. Miniconda 是什么？什么时候安装？<a class="headerlink" href="#4-miniconda-是什么什么时候安装" title="Permanent link">&para;</a></h2>
+<p>Miniconda 是一个较轻量的 Conda 安装程序，可以为不同项目分别管理 Python 环境。它对科研、数据分析和需要很多 Python 包的项目很有用，但维护协会 MkDocs 网站并不强制需要它。</p>
+<p>如果负责人要求你使用 Miniconda：</p>
+<ol>
+<li>从官方页面下载对应系统版本：<a href="https://docs.conda.io/projects/miniconda/en/latest/">https://docs.conda.io/projects/miniconda/en/latest/</a>。</li>
+<li>Windows 按安装程序默认选项安装；macOS 按系统芯片选择 Apple Silicon 或 Intel 版本。</li>
+<li>安装完成后重启 VS Code。</li>
+<li>终端运行：</li>
+</ol>
+<pre><code class="language-shell">conda --version
+</code></pre>
+<p>看到版本号后，再按负责人提供的项目环境命令操作。</p>
+<blockquote>
+<p><strong>不要同时用 Homebrew Python 和 Miniconda Python 创建同一个 MkDocs 环境。</strong> 如果终端提示 <code>python</code>、<code>python3</code> 和 <code>conda</code> 指向不同位置，先暂停并求助。</p>
+<p><strong>截图 A8｜Miniconda 版本检查。</strong> 终端显示 <code>conda --version</code>；图注强调“Miniconda 是可选工具，不是 GitHub 的必需安装项”。</p>
+</blockquote>
+<hr />
+<h2 id="5-git-的首次身份设置">5. Git 的首次身份设置<a class="headerlink" href="#5-git-的首次身份设置" title="Permanent link">&para;</a></h2>
+<p>Commit 中会记录作者名称和邮箱。它不负责登录 GitHub，只是给修改留下署名。</p>
+<p>把下面两条命令中的内容替换成你希望显示的姓名和邮箱：</p>
+<pre><code class="language-shell">git config --global user.name &quot;你的姓名或 GitHub 用户名&quot;
+git config --global user.email &quot;你的 GitHub 邮箱&quot;
+</code></pre>
+<p>检查是否保存成功：</p>
+<pre><code class="language-shell">git config --global --list
+</code></pre>
+<blockquote>
+<p>不要把访问令牌、密码或 OAuth client secret 写入 <code>user.email</code>，也不要把 <code>git config --global --list</code> 的完整输出公开到群里；其中可能包含个人邮箱。</p>
+</blockquote>
+<hr />
+<h2 id="6-安装完成验收">6. 安装完成验收<a class="headerlink" href="#6-安装完成验收" title="Permanent link">&para;</a></h2>
+<p>在 VS Code 中打开一个新终端，根据系统运行：</p>
+<h3 id="windows_1">Windows<a class="headerlink" href="#windows_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-shell">git --version
+py --version
+</code></pre>
+<h3 id="macos_1">macOS<a class="headerlink" href="#macos_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-shell">git --version
+python3 --version
+</code></pre>
+<p>看到 Git 版本号和 Python 3 版本号后，再回到主教程的<a href="../GitHubWebsiteMaintenance/#1-认识协会网站仓库">第 1 节</a>开始。</p>
+<p>如果仍然失败，请一次性提供：操作系统、你输入的完整命令、终端完整报错截图。不要只发“运行不了”。</p>
+<h2 id="安装问题速查">安装问题速查<a class="headerlink" href="#安装问题速查" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>可能原因</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git</code> 找不到</td>
+<td>Git 未安装，或 VS Code 尚未重启</td>
+<td>重启 VS Code；仍失败则重新检查 Git 安装</td>
+</tr>
+<tr>
+<td>Windows 找不到 <code>py</code></td>
+<td>Python 安装时没加入 PATH</td>
+<td>重新运行安装程序并勾选 <strong>Add python.exe to PATH</strong></td>
+</tr>
+<tr>
+<td>macOS 找不到 <code>brew</code></td>
+<td>Homebrew 安装未完成或终端未重启</td>
+<td>重启 VS Code，检查安装命令的最后几行</td>
+</tr>
+<tr>
+<td><code>python</code> 与 <code>python3</code> 版本不一致</td>
+<td>电脑上有多套 Python</td>
+<td>不要自行删除；截图后联系负责人</td>
+</tr>
+<tr>
+<td><code>pip</code> 权限错误</td>
+<td>使用了系统 Python 或权限不足</td>
+<td>优先使用 <code>python3 -m pip</code> / <code>py -m pip</code>，不要加 <code>sudo</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.instant", "navigation.instant.progress", "navigation.prune", "toc.follow", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
