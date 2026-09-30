@@ -216,7 +216,7 @@ git --version
 python3 --version
 ```
 
-看到 Git 版本号和 Python 3 版本号后，再回到主教程的[第 1 节](GitHubWebsiteMaintenance.md#1-认识协会网站仓库)开始。
+看到 Git 版本号和 Python 3 版本号后，再回到[网站文章发布教程](GitHubWebsiteMaintenance.md)的第 1 节开始。
 
 如果仍然失败，请一次性提供：操作系统、你输入的完整命令、终端完整报错截图。不要只发“运行不了”。
 

@@ -181,18 +181,21 @@ docs/trainning/img/
 
 ### 5.1 打开导航配置
 
-在 VS Code 左侧点击根目录的 mkdocs.yml。找到你希望放文章的栏目。例如“骨干手册”现在是：
+在 VS Code 左侧点击根目录的 mkdocs.yml。找到你希望放文章的栏目。例如，站务教程放在“骨干手册 → 文档写作与网站维护”，对应配置节选如下：
 
 ```yaml
   - 骨干手册:
-    - Git、Python 与本地环境安装: trainning/GitPythonEnvironmentSetup.md
-    - GitHub 与网站维护: trainning/GitHubWebsiteMaintenance.md
+    - trainning/index.md
+    - 文档写作与网站维护:
+      - trainning/maintenance/index.md
+      - Git、Python、VS Code 与本地环境安装: trainning/GitPythonEnvironmentSetup.md
+      - 网站文章发布: trainning/GitHubWebsiteMaintenance.md
 ```
 
-在相同的缩进位置增加一行：
+在“网站文章发布”下方、相同的缩进位置增加一行：
 
 ```yaml
-    - 我的第一篇教程: trainning/MyFirstGuide.md
+      - 我的第一篇教程: trainning/MyFirstGuide.md
 ```
 
 左侧文字是网站上显示的标题，右侧是文件从 docs 开始的路径。

@@ -1,7 +1,85 @@
 # 举办活动涉及的行政流程
 ***社团运作的基本单元——活动***
 
-![](../img/活动举办具体流程.png)
+```mermaid
+%%{init: {"flowchart": {"curve": "bumpX", "nodeSpacing": 16, "rankSpacing": 38, "padding": 10}}}%%
+flowchart LR
+    activity(["<span style='color:#0f172a'>活动流程</span>"])
+    funding("<span style='color:#78350f'>1. 筹款（经费）</span>")
+    funding1["草拟预算方案"]
+    funding2["青苗计划、恒星计划<br/>繁星计划"]
+    funding3["其他学校机构的经费"]
+    funding4["向参与者收费（内部活动）"]
+    activity --- funding
+    funding --- funding1 & funding2 & funding3 & funding4
+
+    planning("<span style='color:#0c4a6e'>2. 策划（必要）</span>")
+    planning1["草拟活动地点和时间"]
+    planning2["决定活动具体形式"]
+    planning3["估计活动举办工作量<br/>并拆分分工方案"]
+    activity --- planning
+    planning --- planning1 & planning2 & planning3
+
+    approval("<span style='color:#4c1d95'>3. 立项（正式）</span>")
+    approval1["撰写简洁的策划案"]
+    approval2["在“素质拓展网”<br/>立项申请二课分"]
+    activity --- approval
+    approval --- approval1 & approval2
+
+    publicity("<span style='color:#0c4a6e'>4. 宣传（必要）</span>")
+    publicity1["在群内宣传"]
+    publicity2["使用社团官媒发布活动通知"]
+    publicity3["申请帮推"]
+    publicity4["申请三大学园LED大屏幕"]
+    publicity5["在“团在浙大”平台<br/>提交宣传品申请"]
+    publicity6["在“团在浙大”上<br/>申请摆摊现宣"]
+    activity --- publicity
+    publicity --- publicity1 & publicity2 & publicity3 & publicity4 & publicity5 & publicity6
+
+    preparation("<span style='color:#0c4a6e'>5. 准备（必要）</span>")
+    preparation1["工作分配"]
+    preparation2["招募工作人员"]
+    preparation3["场地的借用、预约、检查"]
+    preparation4["获取道具和奖品"]
+    preparation5["搬运必要的活动道具<br/>和活动奖品"]
+    preparation1 & preparation2 & preparation3 & preparation4 & preparation5 --- preparation
+    preparation --- activity
+
+    hosting("<span style='color:#0c4a6e'>6. 举办（必要）</span>")
+    hosting1["签到"]
+    hosting2["主持方向"]
+    hosting3["秩序维持"]
+    hosting4["核验与发放奖品"]
+    hosting1 & hosting2 & hosting3 & hosting4 --- hosting
+    hosting --- activity
+
+    closing("<span style='color:#4c1d95'>7. 结项（正式）</span>")
+    closing1["在“团在浙大”活动备案"]
+    closing2["在“素质拓展网”<br/>进行二课分加分流程"]
+    closing1 & closing2 --- closing
+    closing --- activity
+
+    reimbursement("<span style='color:#78350f'>8. 报销（经费）</span>")
+    reimbursement1["收集报销材料<br/>发票、网购订单记录<br/>支付记录"]
+    reimbursement2["在浙大计财处网站上传发票<br/>并发起报销预约"]
+    reimbursement3["填写“预决算表”和<br/>“经费使用情况登记表”"]
+    reimbursement4["将文件送指导老师签字<br/>和文学院盖章"]
+    reimbursement5["将签好字盖好章的文件<br/>送计财处"]
+    reimbursement6["处理被计财处打回的<br/>报销申请"]
+    reimbursement1 & reimbursement2 & reimbursement3 & reimbursement4 & reimbursement5 & reimbursement6 --- reimbursement
+    reimbursement --- activity
+
+    classDef overview fill:#e2e8f0,stroke:#475569,color:#0f172a,stroke-width:2px,font-weight:bold;
+    classDef required fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e,stroke-width:2px,font-weight:bold;
+    classDef formal fill:#ede9fe,stroke:#7c3aed,color:#4c1d95,stroke-width:2px,font-weight:bold;
+    classDef budget fill:#fef3c7,stroke:#d97706,color:#78350f,stroke-width:2px,font-weight:bold;
+    classDef detail fill:transparent,stroke:#cbd5e1,stroke-width:1px;
+    class activity overview;
+    class planning,publicity,preparation,hosting required;
+    class approval,closing formal;
+    class funding,reimbursement budget;
+    class funding1,funding2,funding3,funding4,planning1,planning2,planning3,approval1,approval2,publicity1,publicity2,publicity3,publicity4,publicity5,publicity6,preparation1,preparation2,preparation3,preparation4,preparation5,hosting1,hosting2,hosting3,hosting4,closing1,closing2,reimbursement1,reimbursement2,reimbursement3,reimbursement4,reimbursement5,reimbursement6 detail;
+```
 
 本篇指南主要有关举办活动过程中涉及的**行政流程**，包括立项、宣传、现场记录、采购与报销、活动后备案等。
 
@@ -25,7 +103,7 @@
 
 依据活动的面向对象、预计规模、剩余时间来决定你的宣传规模，请务必为宣传工作预留足够的时间。
 
-依据宣传规模和消耗的人力排序，常规宣传渠道包括：协会Q群内宣传、CC98发布预告帖、微信公众号发布宣传推文、申请帮推、申请学园LED大屏幕挂电子海报、申请悬挂海报横幅、申请宣传摊位现宣。其中，微信推文帮推和LED大屏幕申请请参阅[帮推投稿指南](../PublicityHelper)，申请悬挂海报横幅、摊位现宣请参阅社团宝典。
+依据宣传规模和消耗的人力排序，常规宣传渠道包括：协会Q群内宣传、CC98发布预告帖、微信公众号发布宣传推文、申请帮推、申请学园LED大屏幕挂电子海报、申请悬挂海报横幅、申请宣传摊位现宣。其中，微信推文帮推和LED大屏幕申请请参阅[帮推投稿指南](PublicityHelper.md)，申请悬挂海报横幅、摊位现宣请参阅社团宝典。
 
 宣传的文案内容至少需要包括活动的时间、地点、内容，线上活动需要明确活动参与方式，涉及奖品发放的活动需要明确奖品发放规则和评奖评优规则。对于各类活动的宣传文案，可以参阅骨干手册的模板部分。
 
@@ -47,11 +125,11 @@
 - 预算方案
 - 安全方案
 
-活动计划书的markdonw代码模板示例，[点击此处查看渲染效果](../../Template/PlanningProposal_Template)
+活动计划书的 Markdown 模板示例：[查看活动计划书](../Template/PlanningProposal_Template.md)。
 
 ## 场地
 
-借用教室：[借教室](trainning/TheDepartmentOfLove/BorrowClassroom)
+借用教室：[借教室](BorrowClassroom.md)
 
 借用活动室：在工作群向社长提出申请。活动室是和其他社团合用的，社长会负责预约和借用事宜
 

@@ -1,8 +1,10 @@
-# 角色扮演指南
+# 岗位职责与协作
 
 ***人靠衣装马靠鞍***
 
 摘要 | 介绍这些角色在我们社团的作用，明确这些角色应该承担的责任
+
+具体任职人员见[本学期负责人及分工](../home/semester/people.md)。本页保留原有职责说明，实际协作安排由当届负责人确认。
 
 上次更新时间 2026/1/23
 
@@ -30,9 +32,36 @@
 
 [举办活动](TheDepartmentOfLove/TheFullProgressOfHoldingClubActivities.md)
 
-![](img/活动举办具体流程.jpg)
 
-![](img/幻协人力调度工程.png)
+```mermaid
+%%{init: {"flowchart": {"curve": "linear", "nodeSpacing": 40, "rankSpacing": 55}}}%%
+flowchart TB
+    organizer(["<span style='color:#1e3a8a'>活动负责人</span>"])
+    dispatch{{"<span style='color:#4c1d95'>调度中心<br/>（抽卡）</span>"}}
+    operators[["<span style='color:#14532d'>全体干员<br/>（待命）</span>"]]
+
+    organizer -->|发布任务| dispatch
+    dispatch -->|人力资源调度| operators
+    operators -->|没空，反馈给调度中心| dispatch
+    operators -->|有空，响应调度| organizer
+
+    organizer -.- process["<span style='color:#334155'>需要熟悉活动流程</span>"]
+    dispatch -.- lottery["<span style='color:#334155'>抽签程序需要写好</span>"]
+    lottery -.- local["<span style='color:#334155'>目前需由调度员<br/>在个人电脑上执行</span>"]
+    local -.- automation["<span style='color:#334155'>需要探索无人化调度方案</span>"]
+    dispatch -.- records["<span style='color:#334155'>进行人力调度的同时<br/>进行工作记录</span>"]
+    operators -.- roster["<span style='color:#334155'>每个短学期<br/>普查一次干员名单</span>"]
+    operators -.- preferences["<span style='color:#334155'>记录每名干员的工作倾向<br/>会影响干员抽签系统中的抽签权重</span>"]
+
+    classDef organizerRole fill:#dbeafe,stroke:#2563eb,color:#1e3a8a,stroke-width:3px,font-weight:bold;
+    classDef dispatchRole fill:#ede9fe,stroke:#7c3aed,color:#4c1d95,stroke-width:3px,font-weight:bold;
+    classDef operatorRole fill:#dcfce7,stroke:#16a34a,color:#14532d,stroke-width:3px,font-weight:bold;
+    classDef note fill:#f1f5f9,stroke:#94a3b8,color:#334155,stroke-width:1px,stroke-dasharray:4 4;
+    class organizer organizerRole;
+    class dispatch dispatchRole;
+    class operators operatorRole;
+    class process,lottery,local,automation,records,roster,preferences note;
+```
 
 ## 社长
 为了爱戴上枷锁的傻瓜。当社团不健康时，你需要承担几乎所有的工作；而在社团较为健康时，你至少也需要做到以下的事情：
@@ -60,7 +89,7 @@
 
 - 线下工作：包括场务、活动拍照、主持会议、电影放映、摆摊活动摊位值班、组织约饭约牌局等线下内建活动。有时给行政组的同学帮帮忙递送一些表单；
 - 设计工作：设计各种宣传品和周边，将已有的推文文案排版成微信公众号推文，使用AI辅助你的创作。一些工作成果举例，传单、海报、易拉宝、社刊封面、钥匙扣、明信片、书签、动态海报（15s时长的视频）；
-- 行政工作：处理各种表单，撰写通知和推文，评审采购方案是否合规，为社团的各种答辩准备ppt，辅助[本学期活动主要负责人](HumanResources/OurDuty.md)处理行政流程，如借教室、活动立项、推文帮推、线下宣传品申请等；
+- 行政工作：处理各种表单，撰写通知和推文，评审采购方案是否合规，为社团的各种答辩准备ppt，辅助[本学期活动主要负责人](../home/semester/people.md)处理行政流程，如借教室、活动立项、推文帮推、线下宣传品申请等；
 - 策划工作：想出新活动，撰写策划案，落实和指导干员落实策划案（成为活动主要负责人）；
 - AI绘画：使用AI绘画，为社团的设计工作提供素材、为社刊提供配图，承担此项工作需要拥有一台显卡功能强大的电脑（以便拥有舒适的AI绘画体验）
 
